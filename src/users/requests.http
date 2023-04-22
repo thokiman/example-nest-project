@@ -1,0 +1,48 @@
+### Create new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "pain1@abc.com",
+  "password": "as123random1"
+}
+
+### Auth new user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "pain1@abc.com",
+  "password": "as123random1"
+}
+
+### Get user by session -> currently sign in user
+GET http://localhost:3000/auth/whoami
+
+### remove user from session -> remove currently sign in user
+POST http://localhost:3000/auth/signout
+
+### Find by id
+GET http://localhost:3000/auth/1
+
+### Find by email
+GET http://localhost:3000/auth?email=asd@gmail.com
+
+### Update by id
+PATCH http://localhost:3000/auth/123
+Content-Type: application/json
+
+{
+    "email":"asd@gmail.com",
+    "password":"90"
+}
+
+### Remove by id
+DELETE http://localhost:3000/auth/123
+
+
+### Set color
+GET http://localhost:3000/auth/colors/green
+
+### Get Color
+GET http://localhost:3000/auth/colors
